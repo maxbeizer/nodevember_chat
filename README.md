@@ -13,6 +13,9 @@ $ mix phoenix.new nodevember_chat --no-ecto
 $ iex -S mix phoenix.server
 ```
 
+### Part II
+Uncomment channel macro in `web/channels/user_socket.ex` to send "rooms:*"
+messages to the RoomChannel.
 
 ---
 
