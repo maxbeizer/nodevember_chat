@@ -33,6 +33,10 @@ end
 Ensure that socket.js gets loaded and tell the socket to join the "rooms:lobby"
 channel/topic. Note the live code reloading and the join log in the console.
 
+### Part V
+Add jQuery and markup for chat. Add JS to push to channel and receive events
+from channel.
+
 ---
 
 To start your Phoenix app:
