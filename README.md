@@ -29,6 +29,10 @@ defmodule NodevemberChat.RoomChannel do
 end
 ```
 
+### Part IV
+Ensure that socket.js gets loaded and tell the socket to join the "rooms:lobby"
+channel/topic. Note the live code reloading and the join log in the console.
+
 ---
 
 To start your Phoenix app:
