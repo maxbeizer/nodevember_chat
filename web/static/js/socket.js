@@ -59,7 +59,11 @@ const $chatInput         = $("#chat-input");
 const $messagesContainer = $("#messages");
 
 $chatInput.on("keypress", event => {
-  if(event.keyCode === 13){
+  if(event.keyCode === 13 && $chatInput.val() === "count"){
+    channel.push("count", {body: ""});
+    $chatInput.val("");
+  }
+  else if (event.keyCode === 13){
     channel.push("new_msg", {body: $chatInput.val()});
     $chatInput.val("");
   }

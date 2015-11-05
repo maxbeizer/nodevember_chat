@@ -17,7 +17,7 @@ defmodule NodevemberChat.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {NodevemberChat, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger]]
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :werd_counter]]
   end
 
   # Specifies which paths to compile per environment.
@@ -31,6 +31,7 @@ defmodule NodevemberChat.Mixfile do
     [{:phoenix, "~> 1.0.3"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:werd_counter, github: "maxbeizer/werd_counter", branch: "stream"  }]
   end
 end
