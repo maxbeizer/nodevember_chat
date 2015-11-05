@@ -17,6 +17,18 @@ $ iex -S mix phoenix.server
 Uncomment channel macro in `web/channels/user_socket.ex` to send "rooms:*"
 messages to the RoomChannel.
 
+### Part III
+Add RoomChannel to `web/channels` and define a the join function
+```elixir
+defmodule NodevemberChat.RoomChannel do
+  use Phoenix.Channel
+
+  def join("rooms:lobby", _message, socket) do
+    {:ok, socket}
+  end
+end
+```
+
 ---
 
 To start your Phoenix app:
