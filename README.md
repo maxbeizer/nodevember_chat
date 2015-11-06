@@ -46,6 +46,19 @@ You could also broadcast to the chat from Iex via the Endpoint:
 NodevemberChat.Endpoint.broadcast! "rooms:lobby", "new_msg", %{body: "from Iex"}
 ```
 
+### Part VII
+Add the ` secret_key_base: System.get_env("SECRET_KEY_BASE")` to
+`config/prod.exs` and remove call to the `config/prod.secret.exs` call at the
+bottom of that file.
+
+```
+$ heroku apps:create nodevemberchat --buildpack https://github.com/hashnuke/heroku-buildpack-elixir
+$ heroku buildpacks:add https://github.com/gjaldon/heroku-buildpack-phoenix-static.git
+$ heroku config:set SECRET_KEY_BASE=somesecretkey
+$ git push heroku master
+$ herok apps:open
+```
+
 ---
 
 To start your Phoenix app:
