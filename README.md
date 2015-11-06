@@ -37,6 +37,15 @@ channel/topic. Note the live code reloading and the join log in the console.
 Add jQuery and markup for chat. Add JS to push to channel and receive events
 from channel.
 
+### Part VI
+Add the `handle_in` function in the RoomChannel to broadcast message to clients.
+Also add the `handle_out` function for fun.
+
+You could also broadcast to the chat from Iex via the Endpoint:
+```elixir
+NodevemberChat.Endpoint.broadcast! "rooms:lobby", "new_msg", %{body: "from Iex"}
+```
+
 ---
 
 To start your Phoenix app:
